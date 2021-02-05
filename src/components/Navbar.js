@@ -2,13 +2,16 @@ import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
 const iconSize = 30;
-const navClasses = "inline-flex body-font items-center px-3 py-4 text-base";
 
-const Navbar = () => {
+const Navbar = ({ textBlack }) => {
+  const navClasses = `inline-flex ${
+    textBlack ? "" : "text-white "
+  }body-font items-center px-3 py-4`;
+
   return (
     <header className="bg-opacity-0">
       <div className="container mx-auto flex justify-between">
-        <nav className="flex">
+        <nav className="flex absolute top-0 left-0 lg:left-20">
           {/* Nav Links */}
           <NavLink
             to="/"
@@ -36,7 +39,7 @@ const Navbar = () => {
           </NavLink>
         </nav>
         {/* Socials */}
-        <div className="inline-flex py-3 px-3 my-3">
+        <div className="inline-flex py-3 px-3 my-3 absolute top-0 right-0 lg:right-20">
           <SocialIcon
             url="https://www.linkedin.com/in/gabriel-ciechan/"
             className="mr-3"
