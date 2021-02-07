@@ -9,9 +9,9 @@ const Navbar = ({ textBlack }) => {
   }body-font items-center px-3 py-4`;
 
   return (
-    <header className="bg-opacity-0">
-      <div className="container mx-auto flex justify-between">
-        <nav className="flex absolute top-0 left-0 lg:left-20">
+    <header className="bg-opacity-0 z-10 w-full absolute top-0 left-0">
+      <div className="container mx-auto w-full flex justify-between">
+        <nav className="flex lg:px-20">
           {/* Nav Links */}
           <NavLink
             to="/"
@@ -39,26 +39,28 @@ const Navbar = ({ textBlack }) => {
           </NavLink>
         </nav>
         {/* Socials */}
-        <div className="inline-flex py-3 px-3 my-3 absolute top-0 right-0 lg:right-20">
+        <div className="inline-flex py-3 px-3 my-3">
           <SocialIcon
             url="https://www.linkedin.com/in/gabriel-ciechan/"
             className="mr-3"
             target="_blank"
-            // fgColor='#fff'
+            fgColor="#fff"
+            bgColor="#3B82F6"
             style={{ height: iconSize, width: iconSize }}
           />
           <SocialIcon
             url="https://github.com/tudanju"
             className="mr-3"
             target="_blank"
-            // fgColor='#fff'
+            fgColor="#fff"
+            bgColor="#3B82F6"
             style={{ height: iconSize, width: iconSize }}
           />
           <SocialIcon
             url="https://twitter.com/Gabrielciechan"
-            className="mr-3"
             target="_blank"
-            // fgColor='#fff'
+            fgColor="#fff"
+            bgColor="#3B82F6"
             style={{ height: iconSize, width: iconSize }}
           />
         </div>
