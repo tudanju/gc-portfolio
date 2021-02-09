@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import sanityClient from "../client";
 import BlockContent from "@sanity/block-content-to-react";
+import bgImage from "../ann-h-pencils-lg.jpg";
 
 const About = () => {
   const [author, setAuthor] = useState(null);
@@ -24,10 +25,14 @@ const About = () => {
   }
 
   return (
-    <main className="relative">
-      <Navbar textBlack={true} />
+    <main className="relative w-screen h-screen overflow-hidden">
+      <Navbar />
       {/* Background img */}
-      {/* <img src="" alt="" /> */}
+      <img
+        src={bgImage}
+        alt="Pencils"
+        className="absolute object-cover w-full min-h-full"
+      />
       <div className="p-10 pt-20 lg:pt-48 container mx-auto relative">
         <section className="bg-blue-800 rounded shadow-2xl lg:flex p-20">
           <img
@@ -37,7 +42,8 @@ const About = () => {
           />
           <div className="text-lg flex flex-col justify-center">
             <h1 className="heading-font text-6xl text-blue-200 mb-4">
-              My name's <span className="text-blue-100">Gabriel</span>. Welcome!
+              My name's <span className="text-yellow-100">Gabriel</span>.
+              Welcome!
             </h1>
             <div className="lg:text-xl body-font text-white">
               <BlockContent

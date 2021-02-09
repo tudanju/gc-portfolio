@@ -1,4 +1,4 @@
-import bgImage from "../elite_anemone.jpg";
+import bgImage from "../ann-h-pencils-lg.jpg";
 import Navbar from "./Navbar";
 
 const Home = () => {
@@ -9,13 +9,14 @@ const Home = () => {
     <main className="flex justify-center">
       <img
         src={bgImage}
-        alt="Picture of space"
+        alt="Pencils"
         className="absolute object-cover w-full h-full"
       />
       <Navbar />
       <section className="relative flex flex-col items-start min-h-screen pt-12 lg:pt-64 px-8">
         <h1 className={headingClass}>Hello.</h1>
-        <h1 className={headingClass}>I'm Gabriel</h1>
+        <h1 className={headingClass}>I'm Gabriel.</h1>
+        <h1 className={headingClass}>A Web Developer.</h1>
       </section>
     </main>
   );

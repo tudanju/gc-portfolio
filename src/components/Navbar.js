@@ -1,12 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
-const iconSize = 30;
+const Navbar = () => {
+  const navClasses = `inline-flex body-font items-center px-3 py-4`;
 
-const Navbar = ({ textBlack }) => {
-  const navClasses = `inline-flex ${
-    textBlack ? "" : "text-white "
-  }body-font items-center px-3 py-4`;
+  const iconSize = 30;
 
   return (
     <header className="bg-opacity-0 z-10 w-full absolute top-0 left-0">
@@ -22,20 +20,20 @@ const Navbar = ({ textBlack }) => {
             Home
           </NavLink>
           <NavLink
-            to="/projects"
-            exact
-            activeClassName="font-bold"
-            className={navClasses}
-          >
-            Projects
-          </NavLink>
-          <NavLink
             to="/about"
             exact
             activeClassName="font-bold"
             className={navClasses}
           >
             About
+          </NavLink>
+          <NavLink
+            to="/projects"
+            exact
+            activeClassName="font-bold"
+            className={navClasses}
+          >
+            Projects
           </NavLink>
         </nav>
         {/* Socials */}
