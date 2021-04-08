@@ -43,7 +43,7 @@ const About = () => {
           <div className="text-lg flex flex-col justify-center">
             <h1 className="heading-font text-6xl text-blue-200 mb-4">
               My name's <span className="text-yellow-100">Gabriel</span>.
-              Welcome!
+              Welcome.
             </h1>
             <div className="lg:text-xl body-font text-white">
               <BlockContent
@@ -51,6 +51,13 @@ const About = () => {
                 projectId="a4405e53"
                 dataset="production"
               />
+              <div className="underline"></div>
+              <h4 className="text-2xl text-yellow-100">Technologies:</h4>
+              <ul className="list-none">
+                <li>HTML</li>
+                <li>CSS - Flexbox, CSS Grid, Tailwind</li>
+                <li>Javascript - JQuery, React</li>
+              </ul>
             </div>
           </div>
         </section>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import sanityClient from "../client";
-import bgImage from "../pixabay-wet-web.jpg";
+import bgImage from "../adrien-olichon-white-circles.jpg";
 
 const Projects = () => {
   const [projects, setProjects] = useState(null);
