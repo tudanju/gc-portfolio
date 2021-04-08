@@ -1,2 +1,3 @@
-My portfolio
---> Update this before making it public jesus christ you embarrassment
+My web development portfolio
+
+Built using React.js and Sanity.io
