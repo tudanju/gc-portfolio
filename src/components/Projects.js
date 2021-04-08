@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import sanityClient from "../client";
-import bgImage from "../adrien-olichon-white-circles.jpg";
+import bgImage from "../luis-gomes-code-blur.jpg";
 
 const Projects = () => {
   const [projects, setProjects] = useState(null);
@@ -14,7 +14,8 @@ const Projects = () => {
       date,
       description,
       projectType,
-      link
+      link,
+      github
     }`
       )
       .then((data) => setProjects(data))
@@ -27,7 +28,7 @@ const Projects = () => {
 
   return (
     <main className="relative bg-gray-100 w-screen h-screen">
-      <Navbar />
+      <Navbar textWhite={true} />
       {/* Background img */}
       <img
         src={bgImage}
@@ -41,16 +42,16 @@ const Projects = () => {
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome to my Projects Page
         </h2>
-        <section className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6">
+        <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-1 lg:gap-8 md:gap-6">
           {projects &&
             projects.map((project, index) => {
               return (
                 <article
                   key={index}
-                  className="relative rounded-lg shadow-xl bg-yellow-200 p-16"
+                  className="relative rounded-lg shadow-xl bg-blue-800 p-16"
                 >
                   {/* Project title */}
-                  <h3 className="text-gray-800 text-3xl font-bold heading-font mb-2 hover:text-blue-700">
+                  <h3 className="text-gray-100 text-lg lg:text-3xl font-bold heading-font mb-2 hover:text-yellow-100">
                     <a
                       href={project.link}
                       alt={project.title}
@@ -61,27 +62,40 @@ const Projects = () => {
                     </a>
                   </h3>
                   {/* Project details */}
-                  <div className="text-gray-600 text-s body-font flex flex-col">
+                  <div className="text-gray-100 text-s body-font flex flex-col">
                     {/* Date */}
-                    <span>{new Date(project.date).toLocaleDateString()}</span>
+                    {/* <span>{new Date(project.date).toLocaleDateString()}</span> */}
                     {/* Project Type */}
-                    <span>
+                    {/* <span>
                       <strong className="font-bold">Type</strong>:{" "}
                       {project.projectType}
-                    </span>
+                    </span> */}
                     {/* Description */}
-                    <p className="mt-1 mb-6 text-base text-gray-800 leading-relaxed">
+                    <p className="mt-1 mb-6 text-base leading-relaxed">
                       {project.description}
                     </p>
-                    <a
-                      href={project.link}
-                      alt="Link to the project"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 font-bold hover:text-blue-400 text-xl"
-                    >
-                      View the project
-                    </a>
+                    <div className="flex justify-between">
+                      {/* project link */}
+                      <a
+                        href={project.link}
+                        alt="Link to the project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-200 font-bold lg:text-xl hover:text-yellow-100"
+                      >
+                        View the project
+                      </a>
+                      {/* github link */}
+                      <a
+                        href={project.github}
+                        alt="Link to code on github"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-200 font-bold lg:text-xl hover:text-yellow-100"
+                      >
+                        View the Code
+                      </a>
+                    </div>
                   </div>
                 </article>
               );

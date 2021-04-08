@@ -6,11 +6,11 @@ const Home = () => {
     "text-2xl lg:text-8xl text-blue-100 heading-font font-bold leading-none lg:leading-snug";
 
   return (
-    <main className="flex justify-center">
+    <main className="flex justify-center h-screen">
       <img
         src={bgImage}
         alt="Pencils"
-        className="absolute sm:fixed object-cover w-full h-full"
+        className="absolute object-cover w-full h-full"
       />
       <Navbar />
       <section className="relative flex flex-col items-start lg:min-h-screen pt-72 lg:pt-12 lg:pt-64 px-8">
